@@ -158,5 +158,14 @@ module DocxGenerator
         super("w:rFonts", { "w:ascii" => name })
       end
     end
+
+    # Represent the `w:pStyle` element from Office Open XML specification. This class should not be used directly by the users of the library.
+    class Style < Element
+      # Create a new `w:pStyle` element.
+      # @param name [String] The name of the style.
+      def initialize(name)
+        super("w:pStyle", {"w:val" => name })
+      end
+    end
   end
 end

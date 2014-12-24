@@ -88,3 +88,9 @@ describe DocxGenerator::Word::Font do
     DocxGenerator::Word::Font.new("Trebuchet MS").to_s.should eq("<w:rFonts w:ascii=\"Trebuchet MS\" />")
   end
 end
+
+describe DocxGenerator::Word::Style do
+  it "should render a w:pStyle element" do
+    DocxGenerator::Word::Style.new("Heading 1").to_s.should eq("<w:pStyle w:val=\"Heading 1\" />")
+  end
+end

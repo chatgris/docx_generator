@@ -118,6 +118,7 @@ module DocxGenerator
             when :spacing then Word::Spacing.new(value)
             when :indentation then Word::Indentation.new(value)
             when :tabs then Word::Tabs.new(value)
+            when :style then Word::Style.new(value)
           end
         end
     end
